@@ -33,7 +33,7 @@ if [[ ! -e /usr/share/doc/groonga-apt-source/copyright ]]; then
         fi
         groonga_apt_source_deb="groonga-apt-source-latest-$release.deb"
         groonga_apt_source_deb_sign="$groonga_apt_source_deb.asc.$pgroonga_apt_sign_key_fingerprint"
-        echo "je suis la "
+        echo "https://packages.groonga.org/$distribution/$groonga_apt_source_deb"
         curl --proxy "http://proxy.infra.cloud.e2.rie.gouv.fr:1080" -fLO --retry 3 "https://packages.groonga.org/$distribution/$groonga_apt_source_deb"
         curl --proxy "http://proxy.infra.cloud.e2.rie.gouv.fr:1080" -fLO --retry 3 "https://packages.groonga.org/$distribution/$groonga_apt_source_deb_sign"
         gpg \
